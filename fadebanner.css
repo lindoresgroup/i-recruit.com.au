@@ -1,0 +1,76 @@
+/*
+	Fade Banner Styles
+	--> Copy and paste this into the main stylesheet
+*/
+
+#bannerContainer {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	float: right;
+	width: 760px;
+	height: 218px;
+	margin-top: 10px;
+	border-bottom: 5px solid #fb2222;
+}
+
+#bannerContainer.home {
+	height: 316px;
+	border-bottom: none;
+}
+
+.BannerContainer {
+	float: left;
+	width: 499px;
+}
+
+.BannerContainer a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8;
+	opacity: 0.0;
+}
+
+.BannerContainer a.active {
+	z-index: 10;
+	opacity: 1.0;
+}
+
+.BannerContainer a.last-active {
+	z-index: 9;
+}
+
+.BannerContainer a.no-link {
+	cursor: default;
+}
+
+#homeLinks {
+	float: right;
+	list-style: none;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#homeLinks li {
+	margin-top: 4px;
+}
+
+#homeLinks li:first-child {
+	margin-top: 0px;
+}
+
+#homeLinks li a {
+	display: block;
+	width: 227px;
+	height: 26px;
+	padding: 50px 30px 0px 0px;
+	background: #ec1d23 url("images/buttons/home_link_off.png") no-repeat;
+	color: #ffffff;
+	text-align: right;
+}
+
+#homeLinks li a:hover, #homeLinks li.activeSlide a {
+	background: url("images/buttons/home_link_on.png") no-repeat;
+}

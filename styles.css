@@ -1,0 +1,451 @@
+/* CSS Document */
+
+/* Body and Universal Reset */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #ffffff url("images/backgrounds/body_bg.png") repeat-x left top;
+}
+
+#container {
+	margin:0 auto;
+	width: 941px;
+}
+
+.clear {
+	clear:both;
+	height:1px;
+}
+
+img, iframe {
+	border: none;
+	border-color: #ffffff;
+}
+
+
+/* Typography */
+
+
+/* Header */
+
+#headerWrapper {
+	background: url("images/backgrounds/header.jpg") no-repeat center top;
+	height: 123px;
+	position: relative;
+	z-index: 1010;
+}
+
+#header {
+	margin: 0 auto;
+	width: 941px;
+}
+
+#header h1 {
+	float: left;
+	width: 172px;
+	height: 172px;
+	display: block;
+	margin: 0px 0px -49px 0px;
+	padding: 0px;
+}
+
+#tagline {
+	float: right;
+	margin-top: 33px;
+	color: #ffffff;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.header_phone {
+	text-align: right;
+	padding-top: 42px;
+}
+
+.header_phone * {
+	font-size: 34px;
+	line-height: 38px;
+	color: #fff !important;
+	font-weight: bold;
+}
+
+/* Main Navigation */
+
+#mainNavWrapper {
+	height: 49px;
+	position: relative;
+	z-index: 1000;
+}
+
+#mainNav {
+	margin: 0 auto;
+	padding-left: 171px;
+	height: 44px;
+	width: 769px;
+	border-right: 1px solid #ffffff;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+#mainNav li {
+	list-style:none;
+	float:left;
+	position:relative;
+}
+
+#mainNav > li {
+	border-left: 1px solid #ffffff;
+	border-right: 1px solid #abadb0;
+	width: 152px;
+}
+
+#mainNav > li.first {
+	margin-left:0;
+	width: 151px;
+}
+
+#mainNav > li:hover, #mainNav > li.current {
+	background: url("images/backgrounds/menu_bg_on.png") repeat-x;
+}
+
+#mainNav li a {
+	display: block;
+	position: relative;
+}
+
+#mainNav li a:hover, #mainNav li.current > a {
+	color: #6c6c6c;
+}
+
+#mainNav > li > a {
+	padding: 22px 15px 0px 15px;
+	height: 22px;
+	margin: 0px -1px 0px -1px;
+	
+	background: none;
+	border: none;
+	border-bottom: 5px solid #abadb0;
+	
+	color: #555555;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+#mainNav > li.first > a {
+	margin-left: 0px;
+}
+
+#mainNav > li > a:hover, #mainNav > li.current > a {
+	border-color: #fb2222;
+}
+
+#mainNav ul {
+	position:absolute;
+	width:152px; /* left offset of submenus need to match (see below) */
+	top:-999px;
+}
+
+#mainNav ul li {
+	width:100%;
+}
+
+#mainNav li:hover {
+	visibility:inherit; /* fixes IE7 'sticky bug' */
+}
+
+#mainNav li:hover ul, #mainNav li.sfHover ul {
+	left:0;
+	top:49px; /* match top ul list item height */
+	z-index:99;
+}
+
+#mainNav li:hover li ul, #mainNav li.sfHover li ul {
+	top:-999em;
+}
+
+#mainNav li li:hover ul, #mainNav li li.sfHover ul {
+	left:152px; /* match ul width */
+	top:0;
+}
+
+#mainNav li li:hover li ul, #mainNav li li.sfHover li ul {
+	top:-999em;
+}
+
+#mainNav li li li:hover ul, #mainNav li li li.sfHover ul {
+	left:152px; /* match ul width */
+	top:0;
+}
+
+#mainNav ul li a {
+	padding: 5px 15px;
+	margin: 0px 0px 5px 0px;
+	display: block;
+	width: 121px;
+	position: relative;
+	
+	background: #eeeeee;
+	border: 1px solid #abadb0;
+	
+	color: #555555;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+
+/* Sidebar */
+
+#sidebar {
+	float: left;
+	width: 157px;
+	min-height: 268px;
+	padding: 30px 0px 30px 15px;
+	background: #ffffff;
+}
+
+#subNav {
+	width: 142px;
+	margin-bottom: 20px;
+}
+
+#subNav li {
+	padding: 2px 0px;
+	list-style: none;
+	border-bottom: 1px solid #cacaca;
+}
+
+#subNav li.subNavHeading, #subNav li:last-child {
+	border-bottom: none;
+	margin-bottom: 5px;
+}
+
+#subNav li.subNavHeading {
+	font-size: 22px;
+	font-weight: bold;
+}
+
+#subNav li a {
+	color: #959595;
+}
+
+#sidebar .sidebarAddress table {
+	margin-bottom: 8px;
+	color: #ec1d23;
+	font-size: 10px;
+	line-height: 12px;
+}
+
+#sidebar .sidebarAddress th {
+	padding-right: 6px;
+	vertical-align: top;
+}
+
+
+/* Content */
+
+#pageHeading {
+	float: right;
+	width: 760px;
+	margin: 20px 0px 20px 0px;
+}
+
+#content {
+	float:right;
+	width: 760px;
+}
+
+#content p, #content table, #content ul, #content ol {
+	margin:0 0 18px 0;
+}
+
+#content ul, #content ol {
+	margin-left:18px;
+}
+
+#content .column {
+	margin-left: 25px;
+	margin-bottom: 25px;
+	float: left;
+}
+
+#content .column.first {
+	margin-left: 0px;
+}
+
+
+/* Footer */
+
+#footerWrapper {
+	height: 130px;
+	background-color:#eaeaea;
+	border-bottom: 5px solid #ec1d23;
+}
+
+#footer {
+	margin:0 auto;
+	padding: 15px 0px 10px 0px;
+	width:941px;
+	text-align:left;
+	
+	color: #555555;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 10px;
+}
+
+#footer a {
+	color: #555555;
+}
+
+#footer ul {
+	display: block;
+	margin-top: 5px;
+	margin-bottom: 6px;
+	font-weight: bold;
+}
+
+#lindoresLogo {
+	float: right;
+}
+
+/* Misc Styles */
+
+.clientLogos {
+	text-align: center;
+}
+
+.clientLogos img {
+	display: inline-block;
+	margin: 0px 1px 25px 1px;
+}
+
+.barList li {
+	display: inline;
+	list-style: none;
+	margin:0 12px 0 0;
+}
+
+.barList li:before {
+	content: "|";
+	margin:0 5px 0 -9px;
+}
+
+.barList li:first-child:before {
+	content: "";
+	margin:0px;
+}
+
+
+/* Online Enquiry Form */
+
+.onlineEnquiryTable td {
+	padding-bottom:5px;
+}
+
+.yourDetails {
+	padding:7px 0 0 0;
+	height:30px;
+	font-weight:bold;
+	font-size:13px;
+}
+
+.yourDetails h2 {
+	margin: 0px;
+}
+
+.requiredFields {
+	text-align:right;
+	padding:4px 0 0 0;
+	font-size:11px;
+}
+
+.required {
+	text-align:center;
+	vertical-align:middle;
+	padding-left:15px;
+	padding-right:5px;
+}
+
+input, textarea, select {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+.onlineEnquiryTable input.textinput, .onlineEnquiryTable input.textinputhover, .onlineEnquiryTable textarea {
+	width:605px;
+	-webkit-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+	-moz-box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+	box-shadow: inset 1px 1px 2px rgba(0,0,0,0.2);
+	padding:8px;
+}
+
+.textinput {
+	border:1px solid #BABABA;
+}
+
+.textinputhover {
+	border:1px solid #70A329;
+}
+
+.onlineEnquiryTable .errorInput {
+	background: url("images/icons/error.gif") no-repeat right 5px #fff;
+}
+
+.submit {
+	padding-top: 10px;
+	text-align: left;
+}
+
+.submit input {
+	padding: 2px 4px;
+}
+
+.errorText {
+	color:#FF0000;
+}
+
+input.hintText {
+	color: #999999;
+}
+
+/***** Error / Info / Caution Boxes *****/
+
+.error_box, .info_box {
+	margin:0 0 15px 0;
+	padding:15px;
+	border-width: 3px;
+	border-style: solid;
+}
+
+.error_box {
+	border-color: #CC0000;
+	background-color: #f3d8d8;
+	color:#CC0000;
+}
+
+.info_box {
+	border-color: #7F8F13;
+	background-color: #E0E6B6;
+	color:#7F8F13;
+}
+
+#content .error_box ul {
+	margin-bottom:0;
+}
+
+
+/* Classes Reserved for the TinyMCE Editor  */
+
+.editor {
+	width: 100%;
+}
+
+.mini_editor {}
+
+.blogDate {
+	display: block;
+	margin-bottom: 5px;
+}
